@@ -1,7 +1,8 @@
 // Change navbar styles on scroll
 
 window.addEventListener('scroll', () => {
-    document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0)
+    document.querySelector('nav').classList.toggle
+        ('window-scroll', window.scrollY > 0)
 });
 
 
@@ -44,3 +45,24 @@ closeBtn.addEventListener("click", () => {
     closeBtn.style.display = "none";
     menuBtn.style.display = "inline-block";
 })
+
+
+// // JavaScript functions to handle modal
+// function openModal(imageSrc) {
+//     var modal = document.getElementById("myModal");
+//     var modalImg = document.getElementById("modalImage");
+//     modal.style.display = "block";
+//     modalImg.src = imageSrc;
+// }
+
+// function closeModal() {
+//     var modal = document.getElementById("myModal");
+//     modal.style.display = "none";
+// }
+
+// // Prevent event propagation when clicking on the modal content
+// document.getElementById("myModal").addEventListener("click", function (event) {
+//     if (event.target === this) {
+//         closeModal();
+//     }
+// });
