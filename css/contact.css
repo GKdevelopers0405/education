@@ -11,7 +11,7 @@
 
 /* =================== ASIDE =================== */
 .contact__aside {
-    background: var(--color-primary);
+    background: var(--color-bg2);
     padding: 3rem;
     border-radius: 1rem;
     position: relative;
@@ -84,6 +84,7 @@ input, textarea {
     background: var(--color-bg);
     color: var(--color-white);
     resize: none;
+    border-radius: 5px;
 }
 
 .contact__form .btn {

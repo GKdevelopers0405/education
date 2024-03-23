@@ -9,6 +9,9 @@
 
         <!--ICONSCOUT CDN-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- GOOGLE FONTS (MONTSERRAT) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,10 +93,10 @@
                     </ul>
                 </aside>
 
-                <form action="https://formspree.io/f/myyodoga" method="POST" class="contact__form">
+                <form action="https://formspree.io/f/myyodoga" method="POST" class="contact__form" onsubmit="return validatePhoneNumber()">
                     <div class="form__name">
-                        <input type="text" name="First Name" placeholder="First Name" required>
-                        <input type="text" name="Last Name" placeholder="Last Name" required>
+                        <input type="text" name="First Name" placeholder="Full Name" required>
+                        <input id="phoneno" type="number"  pattern="[0-9]{10}" name="Phoneno" placeholder="Phone No" required>
                     </div>
                     <input type="email" name="Email Address" placeholder="Your Email Address" required>
                     <textarea name="Message" rows="7" placeholder="Message..." required></textarea>
@@ -101,29 +104,6 @@
                 </form>
             </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <footer>
@@ -183,6 +163,13 @@
                 <small>Copyright &copy; 2024 All rights Reserved. Designed by GKDevelopers</small>
             </div>
         </footer>
+
+        <a id="goto-top"><i class="uil uil-arrow-up"></i></a>
+   
+ 
+        <a id="whats-app" href="https://wa.me/+918978226672" target="_blank">
+            <i class="fa-brands fa-square-whatsapp"></i>whats App
+        </a>
 
 
         <script src="../main.js"></script>

@@ -1,0 +1,61 @@
+
+
+.btn{
+    display: none;
+}
+
+.get-started{
+    display: inline-block;
+}
+
+.header{
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.header h2{
+    margin: 0;
+}
+
+.desc{
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.courses{
+    padding: 4rem 3rem;
+}
+
+.courses__section {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #1f2641;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.courses__section h3{
+    /* text-align: left; */
+    margin-bottom: 1.5rem;
+}
+
+.knowmore{
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+@media screen and (max-width:1024px) {
+    .courses{
+        padding: 4rem 1rem;
+    }
+}
+
+    .course{
+        background: transparent;
+    border-color: var(--color-primary);
+    }
+
+    .course:hover{
+        background-color: var(--color-bg1);
+    }

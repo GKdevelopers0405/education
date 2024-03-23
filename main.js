@@ -47,6 +47,67 @@ closeBtn.addEventListener("click", () => {
 })
 
 
+document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionContent = button.nextElementSibling;
+
+        button.classList.toggle('active');
+
+        if (button.classList.contains('active')) {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+        } else {
+            accordionContent.style.maxHeight = 0;
+        }
+
+        // Close other open accordion items
+        document.querySelectorAll('.accordion-header').forEach(otherButton => {
+            if (otherButton !== button) {
+                otherButton.classList.remove('active');
+                otherButton.nextElementSibling.style.maxHeight = 0;
+            }
+        });
+    });
+});
+
+
+window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        var goToTopButton = document.getElementById("goto-top");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            goToTopButton.style.display = "flex";
+        } else {
+            goToTopButton.style.display = "none";
+        }
+    }
+
+
+    function scrollToTop() {
+        // document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    // Add click event listener to the "Go to Top" button
+    document.getElementById("goto-top").addEventListener("click", scrollToTop);
+
+
+    function validatePhoneNumber() {
+        var phoneNumber = document.getElementById("phone").value;
+        var phoneNumberPattern = /^\d{10}$/; // Regular expression for 10-digit phone number
+
+        if (phoneNumberPattern.test(phoneNumber)) {
+            // Phone number is valid
+            return true;
+        } else {
+            // Phone number is invalid
+            alert("Please enter a valid 10-digit phone number.");
+            return false;
+        }
+    }
+
+
+    
+
 // // JavaScript functions to handle modal
 // function openModal(imageSrc) {
 //     var modal = document.getElementById("myModal");
@@ -66,3 +127,5 @@ closeBtn.addEventListener("click", () => {
 //         closeModal();
 //     }
 // });
+
+
