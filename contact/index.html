@@ -30,8 +30,9 @@
     <body>
         <nav>
             <div class="container nav__container">
-                <a href="../">
-                    <h4>EduZone</h4>
+                <a class="nav__brand" href="#">
+                    <img src="../images/logo.png" alt="logo">
+                  <h4>Shining Star</h4>
                 </a>
                 <ul class="nav__menu">
                     <li><a href="../">Home</a></li>
@@ -93,7 +94,7 @@
                     </ul>
                 </aside>
 
-                <form action="https://formspree.io/f/myyodoga" method="POST" class="contact__form" onsubmit="return validatePhoneNumber()">
+                <form action="mailto:shinningstars@gmail.com" method="POST" class="contact__form" onsubmit="return validatePhoneNumber()">
                     <div class="form__name">
                         <input type="text" name="First Name" placeholder="Full Name" required>
                         <input id="phoneno" type="number"  pattern="[0-9]{10}" name="Phoneno" placeholder="Phone No" required>
