@@ -868,3 +868,7 @@ footer ul li a:hover {
     
 }
 
+.footer__container a{
+    text-decoration: none !important;
+}
+
